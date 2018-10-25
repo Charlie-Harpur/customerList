@@ -28,19 +28,16 @@ public class Customer {
         {
             try
             {
+                //If It can be converted to int, next line executes and returns false
                 Integer.parseInt( tempPostalCode.substring(i, i + 1));
                 return false;
             }
-            catch(NumberFormatException NFE)
-            {
-                
-            }
-        }
-        for (int i = 1; i < 6; i += 2)
-        {
+            catch(NumberFormatException NFE){}
+            
             try
             {
-                Integer.parseInt( tempPostalCode.substring(i, i + 1));
+                //If not an int throws error and returns false
+                Integer.parseInt( tempPostalCode.substring(i + 1, i + 2));
             }
             catch(NumberFormatException NFE)
             {

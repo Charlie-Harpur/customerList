@@ -26,6 +26,7 @@ public class CustomerList {
         ArrayList<Customer> customers = new ArrayList();
         ArrayList<String> customerFile = new ArrayList();
         customerFile = (ArrayList<String>) Files.readAllLines(Paths.get("customerList.txt"));
+        
         for(int i = 0; i < customerFile.size() / 5; i++)
         {
             customers.add(new Customer(customerFile.get(i), customerFile.get(i + 1), customerFile.get(i + 2), customerFile.get(i + 3), customerFile.get(i + 4)));
